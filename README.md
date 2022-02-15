@@ -1,4 +1,10 @@
-# road-map-for-junior
+
+## Uzbek language
+
+# Road-Map-Backend
+
+
+ ## for-junior
 
 Bu loyihani yosh dasturchilarga qo'llanma bo'lishi uchun yozishni niyat qildim. 
 Ko'pincha yosh dasturchilarda real proyektlarda ishlashda yoki proyektni ichiga kirib ketishda muammolar bo'ladi. Shunday muammolarni oldini olish uchun 
@@ -33,7 +39,7 @@ Crudlar: Books, Authors, Users, Price
 3. Book view pageda User tomonidan comment yozishi
 4. Book view pageda User tomonidan sotib olinishi
 
-Tablitsalar. 
+Tablitsalar:
 1. Authors - id, name, ...
 2. Books - id, author_id, name, ... 
 3. Users - id, login, password, name, ...
@@ -66,3 +72,7 @@ Maqsad:
 3. `@Query` anatatsiyasini yutuqlari va kamchiligi.
 4. Springda proyekt ichida `native sql`larni yozib ko'rish va uni natijasida kelib chiqadigan muammolarni o'rganish
 
+
+## for-middle
+
+# Road-Map-Frontend
