@@ -26,8 +26,7 @@ Maqsad: Image fayl bilan ishlashni o'rganish. PDF va Excelga export qilish (Apac
 
 
 ## Book Shop
-### Texnik topshiriq.
-#### Deadline 1
+Kitob sotuv do'konini avtomatlashtirish uchun mo'ljallangan loyiha.
 Crudlar: Books, Authors, Users, Price
 1. User uchun Auth(login parolli)
 2. Author view pageda kitob qo'shish imkoniyati bo'lishi kerak
@@ -41,3 +40,29 @@ Tablitsalar.
 4. Comments - id, book_id, user_id, content, created_at 
 5. Prices - id, book_id, price,  ... 
 6. User_purchases - id, book_id, user_id, price, created_at
+
+Maqsad: `Spring Security`, `JWT`, `DB` - table relations
+
+## Book Shop Manager Panel
+Managerlar uchun sotuv jarayoni hisobotlarini ko'rib turish imkoniyati kerak. Bu loyiha  Book shop loyihasini davomi hisoblanadi.
+Kerakli hisobotlar:
+a) Userlar bo'yicha
+1. Ohirgi haftada ro'yhatdan o'tgan Userlar
+2. Ro'yhadan o'rgan userlar sonini davrlarda(masalan oylarga bo'lib) hisoboti
+3. Eng aktiv userlar - bunda ko'p kitob sotib olgan, ko'p summada kitob sotib olgan, ko'p comment yozgan shartlari bo'yicha chiqarish kerak.
+   1. Vali(Ismi)    2(kitob soni)  89,000(summa)  21(comment soni)
+   2. Ali           5              53,000         45
+   3. ...
+   
+b) Kitoblar bo'yicha:
+1. Eng ko'p sotilgan kitoblarni ko'rsatish
+2. Eng mashxur kitoblar - sotilishi, commentlar soni, view count bo'yicha chiqarish kk
+
+c) Yozunchilar bo'yicha. Bu o'zlaringiz ijod qilib ko'rishingiz mumkin.
+
+Maqsad:
+1. Qiyin SQLlarni yozib ko'rish. 
+2. `DAO` va `Repository` bilan ishlash, 
+3. `@Query` anatatsiyasini yutuqlari va kamchiligi.
+4. Springda proyekt ichida `native sql`larni yozib ko'rish va uni natijasida kelib chiqadigan muammolarni o'rganish
+
