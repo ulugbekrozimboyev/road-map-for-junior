@@ -73,6 +73,16 @@ Maqsad:
 4. Springda proyekt ichida `native sql`larni yozib ko'rish va uni natijasida kelib chiqadigan muammolarni o'rganish
 
 
+#Todo
+## Swagger 
+
+## Prometheus monitoring
+
+##Video Streaming
+
+## Socket
+
+
 ## for-middle
 
 # Road-Map-Frontend
