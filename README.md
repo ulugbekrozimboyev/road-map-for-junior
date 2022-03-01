@@ -8,12 +8,12 @@
 
 Bu loyihani yosh dasturchilarga qo'llanma bo'lishi uchun yozishni niyat qildim. 
 Ko'pincha yosh dasturchilarda real proyektlarda ishlashda yoki proyektni ichiga kirib ketishda muammolar bo'ladi. Shunday muammolarni oldini olish uchun 
-men kichik proyektlar ketma-ketligidan iborat kichik harita yaratmoqchiman. Bunda har bir proyektda kichik ko'nikma va bilimlar olish imkonini beruvchi 
+biz haqiqiy loyihalarda uchraydigan qismlarni kichik proyektlar qilib, proyektlar ketma-ketligidan iborat kichik harita yaratmoqchimiz. Bunda har bir proyektda kichik ko'nikma va bilimlar olish imkonini beruvchi 
 topshiriqlar bo'ladi va bu kelajakda haqiqiy proyektlarda as qotadi.
 
 Kimlarga mo'ljallangan: Java Spring Backend kursni tugatib junor bo'lib ishga kirmoqchi bo'lgan yosh dasturchilarga.
 
-Lohihalarni ham dokument (TZ) ham kod sifatida berib borishga harakat qilaman.
+Lohihalarni ham dokument (TZ) ham kod ko'rinishida berib borishga harakat qilamiz.
 
 
 ## Students Project
@@ -23,7 +23,7 @@ Pagelar:
 2. Add/Edit page - yangi talaba qo'shish yoki ma'lumotlarini o'zgartirish. Avatar kiritish imkoniyati ham bo'lsin. Faylni yuklash diskka bo'lishi kerak yani DBga rasmni yuklash shart emas.
 3. View page -  talaba ma'lumotlari. PDF - Rezume yaratish imkoniyati bo'lishi kerak.
 Tablitsalar: 
-1. Students - id, first_name, last_name, middle_name, description, study_stat_date, study_end_date, university_id, field_of_study, gender, birthdate, created_at
+1. Students - id, first_name, last_name, middle_name, description, study_stat_date, study_end_date, field_of_study_id, gender, birthdate, created_at
 2. Field_of_studies - id, name, university_id
 3. Universities - id, name
 
@@ -75,10 +75,20 @@ Maqsad:
 
 #Todo
 ## Swagger 
+Avtoparkni tasavvur qilamiz. Loyida haydovchilar va moshinalar uchun CRUDlar bor
+Yangi kelgan haydochularni Exceldan ham import qilib bazaga qo'shish imkoniyatini qo'shish kerak.
+1. Excel fayl shabloni oldindan kelishib olingan bo'ladi deb hisoblaymiz. 
+2. Frontend qismini yozishi kerak bo'lgan odamga bu lohida APIlari dokumentatsiyasini yaratib berish kerak. Bazi API methodlarni user role bn yopish kerak.
+
+Maqsad: Excel parse. Swagger
 
 ## Prometheus monitoring
+Book shop lohihasidan foydalanishimiz mumkin. Qo'shimcha faqat har bir methodni monitorng qilish kerak bo'ladi
+Bunda prometheusni API source ichida ishlatishimiz kerak bo'ladi. Testlsh uchun jMeter bilan har xil sonli senariy asosida zaproslar yuboriladi.
 
-##Video Streaming
+Maqsad: Prometheus, Apache JMeter
+
+## Video Streaming
 
 ## Socket
 
