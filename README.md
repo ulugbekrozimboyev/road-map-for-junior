@@ -89,8 +89,14 @@ Bunda prometheusni API source ichida ishlatishimiz kerak bo'ladi. Testlsh uchun 
 Maqsad: Prometheus, Apache JMeter
 
 ## Video Streaming
+Oddiy videoni streaming qilib beruvchi servis. 
+
+Maqsad: stream
 
 ## Socket
+Chat servisini yaratish.
+
+Maqsad: Socketlar bilan ishlashni o'rganish
 
 
 ## for-middle
