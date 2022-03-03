@@ -4,7 +4,7 @@
 # Road-Map-Backend
 
 
- ## for-junior
+## for-junior
 
 Bu loyihani yosh dasturchilarga qo'llanma bo'lishi uchun yozishni niyat qildim. 
 Ko'pincha yosh dasturchilarda real proyektlarda ishlashda yoki proyektni ichiga kirib ketishda muammolar bo'ladi. Shunday muammolarni oldini olish uchun 
@@ -73,14 +73,16 @@ Maqsad:
 4. Springda proyekt ichida `native sql`larni yozib ko'rish va uni natijasida kelib chiqadigan muammolarni o'rganish
 
 
-#Todo
 ## Swagger 
 Avtoparkni tasavvur qilamiz. Loyida haydovchilar va moshinalar uchun CRUDlar bor
 Yangi kelgan haydochularni Exceldan ham import qilib bazaga qo'shish imkoniyatini qo'shish kerak.
 1. Excel fayl shabloni oldindan kelishib olingan bo'ladi deb hisoblaymiz. 
 2. Frontend qismini yozishi kerak bo'lgan odamga bu lohida APIlari dokumentatsiyasini yaratib berish kerak. Bazi API methodlarni user role bn yopish kerak.
+3. 2ta avtopark bor va ular uchun DB connection, settingslar boshqacha bo'lishi kerak
 
-Maqsad: Excel parse. Swagger
+Maqsad: Excel parse. Swagger. Profiles
+
+## for-middle
 
 ## Prometheus monitoring
 Book shop lohihasidan foydalanishimiz mumkin. Qo'shimcha faqat har bir methodni monitorng qilish kerak bo'ladi
@@ -88,17 +90,24 @@ Bunda prometheusni API source ichida ishlatishimiz kerak bo'ladi. Testlsh uchun 
 
 Maqsad: Prometheus, Apache JMeter
 
-## Video Streaming
-Oddiy videoni streaming qilib beruvchi servis. 
 
-Maqsad: stream
+## Video blog.
+Bitta blogger bor deylik. U o'zini videolarini bitta serverga qo'yib boradi. Yani post uchun CRUD bo'ladi.
+Postni ichidagi videoni UIga streaming qilib berish kerak bo'ladi. 
 
-## Socket
-Chat servisini yaratish.
-
-Maqsad: Socketlar bilan ishlashni o'rganish
+Maqsad: Stream
 
 
-## for-middle
+## Parkovka yoki online navbat 
+Parkovkaning band/bo'sh joylarini bilib turish uchun online dastur. 4 qavatli avtomobillarga mo'ljallangan turargoh mavjud va 
+uning 4 ta kirish joyi bor deb tasavvur qilaylik. UIda birnechta oyna(client)dan moshina kirgani yoki chiqib ketgani haqida habar keladi.
+Bitta asosiy monitor client bo'ladi va hozirgi holatni ko'rsatib turadi:
+ - qancha bo'sh joy bor
+ - qaysi qavatda qancha bo'sh joy bor
+
+
+Maqsad: Socketlar bilan ishlashni o'rganish. Multithreading
+
+
 
 # Road-Map-Frontend
