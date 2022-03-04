@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "server.jpa.hibernate.ddl-auto",
+      "type": "java.lang.String",
+      "description": "Description for server.jpa.hibernate.ddl-auto."
+  }
+] }
