@@ -1,6 +1,9 @@
 package com.just.go.store.storeImpl;
 
 import com.just.go.aggregate.entity.Student;
+import com.just.go.store.jpo.StudentJpo;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -21,4 +24,5 @@ public interface StudentStore {
     boolean exists(String studentId);
 
 
+    Page<StudentJpo> findAll(Pageable pageable);
 }

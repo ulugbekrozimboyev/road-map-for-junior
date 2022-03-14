@@ -1,6 +1,7 @@
 package com.just.go.store.jpo.repository;
 
 import com.just.go.store.jpo.StudentJpo;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 
 
-public interface StudentRepository extends CrudRepository<StudentJpo, Long> {
+public interface StudentRepository extends JpaRepository<StudentJpo, Long> {
         //
         List<StudentJpo> findAllByName(String name);
        // List<StudentJpo> findAllByStudents();

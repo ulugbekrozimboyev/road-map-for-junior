@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * @Company: {}
  * @Author: {urunov}
@@ -14,7 +16,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Student extends Entity {
+public class Student extends Entity implements Serializable {
     //
     private String name;
     private String lastName;

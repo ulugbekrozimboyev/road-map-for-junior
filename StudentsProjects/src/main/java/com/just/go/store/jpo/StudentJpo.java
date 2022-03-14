@@ -8,6 +8,7 @@ import lombok.Setter;
 import org.springframework.beans.BeanUtils;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,7 +24,10 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 @NoArgsConstructor
-public class StudentJpo {
+public class StudentJpo implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     //
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

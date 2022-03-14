@@ -5,6 +5,8 @@ import com.just.go.store.jpo.StudentJpo;
 import com.just.go.store.jpo.repository.StudentRepository;
 import com.just.go.util.exception.NoSuchStudentException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -29,7 +31,7 @@ public class StudentDBImplem implements StudentStore{
     }
 
     @Override
-    public Student retrieve(String studentId) {
+    public Student  retrieve(String studentId) {
         if(studentRepository.findById(Long.valueOf(studentId)).isPresent()){
             StudentJpo studentJpo = studentRepository.findById(Long.valueOf(studentId)).get();
             Student student = studentJpo.toDomain();
@@ -78,5 +80,10 @@ public class StudentDBImplem implements StudentStore{
     @Override
     public boolean exists(String studentId) {
         return studentRepository.findById(Long.valueOf(studentId)).isPresent();
+    }
+
+    @Override
+    public Page<StudentJpo> findAll(Pageable pageable) {
+        return studentRepository.findAll(pageable);
     }
 }
