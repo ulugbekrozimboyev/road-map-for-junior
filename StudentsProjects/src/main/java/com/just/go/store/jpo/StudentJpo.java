@@ -1,7 +1,6 @@
 package com.just.go.store.jpo;
 
 import com.just.go.aggregate.entity.Student;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,7 +27,6 @@ public class StudentJpo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    //
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

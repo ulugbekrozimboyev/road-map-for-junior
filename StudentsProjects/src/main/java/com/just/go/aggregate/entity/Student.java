@@ -33,15 +33,6 @@ public class Student extends Entity implements Serializable {
         this.studentCard = studentId;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", studentId='" + studentCard + '\'' +
-                '}';
-    }
-
     public static Student sample(){
         //
         String name = "Ali";
@@ -49,5 +40,14 @@ public class Student extends Entity implements Serializable {
         String studentId = "0032";
 
         return new Student(name, lastName, studentId);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", studentId='" + studentCard + '\'' +
+                '}';
     }
 }

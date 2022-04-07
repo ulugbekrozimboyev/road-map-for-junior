@@ -3,6 +3,7 @@ package com.just.go.service.logic;
 import com.just.go.aggregate.entity.Student;
 import com.just.go.mappers.StudentMapper;
 import com.just.go.service.sdo.StudentCdo;
+import com.just.go.store.jpo.StudentJpo;
 import com.just.go.store.storeImpl.StudentStore;
 import com.just.go.util.exception.NoSuchStudentException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,8 +67,14 @@ public class StudentServiceImp implements StudentService{
     }
 
     @Override
-    public Page<Student> findAll(Pageable pageable) {
-        return studentStore.findAll(pageable)
+    public Page<Student> findAllStudents(Pageable pageable) {
+        return studentStore.retrieveAll(pageable)
                 .map(studentMapper::toDto);
     }
+
+//    @Override
+//    public Page<Student> findAll(Pageable pageable) {
+//        return studentStore.findAll(pageable)
+//                .map(studentMapper::toDto);
+//    }
 }

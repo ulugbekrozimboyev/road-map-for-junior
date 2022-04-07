@@ -18,7 +18,7 @@ import java.util.List;
  * @Date: {2022/03/04 && 9:42 PM}
  */
 @Repository
-public class StudentDBImplem implements StudentStore{
+public class StudentDBImplem implements StudentStore {
     //
     @Autowired
     StudentRepository studentRepository;
@@ -27,12 +27,12 @@ public class StudentDBImplem implements StudentStore{
     public String create(Student student) {
         StudentJpo studentJpo = new StudentJpo(student);
         studentJpo = studentRepository.save(studentJpo);
-        return String.valueOf(studentJpo.getId());
+        return String.valueOf(" Store to DB: "+  studentJpo.getId()+ "   " +studentJpo.getName() + " " + studentJpo.getLastName());
     }
 
     @Override
-    public Student  retrieve(String studentId) {
-        if(studentRepository.findById(Long.valueOf(studentId)).isPresent()){
+    public Student retrieve(String studentId) {
+        if (studentRepository.findById(Long.valueOf(studentId)).isPresent()) {
             StudentJpo studentJpo = studentRepository.findById(Long.valueOf(studentId)).get();
             Student student = studentJpo.toDomain();
             student.setId(String.valueOf(studentJpo.getId()));
@@ -49,7 +49,6 @@ public class StudentDBImplem implements StudentStore{
     }
 
 
-
     @Override
     public void update(Student student) {
         StudentJpo studentJpo = new StudentJpo(student);
@@ -62,20 +61,13 @@ public class StudentDBImplem implements StudentStore{
     @Override
     public void delete(String studentId) {
 
-        if (exists(studentId)){
+        if (exists(studentId)) {
             studentRepository.deleteById(Long.valueOf(studentId));
             return;
         }
         throw new NoSuchStudentException("No such with this id --> " + studentId);
     }
 
-//    @Override
-//    public List<Student> retrieveStudents() {
-//
-//        List<StudentJpo> jpos = studentRepository.findAllByStudents();
-//
-//        return StudentJpo.toDomains(jpos);
-//    }
 
     @Override
     public boolean exists(String studentId) {
@@ -83,7 +75,9 @@ public class StudentDBImplem implements StudentStore{
     }
 
     @Override
-    public Page<StudentJpo> findAll(Pageable pageable) {
-        return studentRepository.findAll(pageable);
+    public Page<StudentJpo> retrieveAll(Pageable pageable) {
+        return null;
     }
+
+
 }

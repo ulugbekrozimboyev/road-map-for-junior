@@ -20,9 +20,7 @@ public interface StudentStore {
     List<Student> retrieveByName(String name);
     void update(Student student);
     void delete(String studentId);
-   // List<Student> retrieveStudents();
     boolean exists(String studentId);
+    Page<StudentJpo> retrieveAll(Pageable pageable);
 
-
-    Page<StudentJpo> findAll(Pageable pageable);
 }
