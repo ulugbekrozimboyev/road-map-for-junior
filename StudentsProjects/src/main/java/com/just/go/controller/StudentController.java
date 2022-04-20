@@ -4,6 +4,7 @@ import com.just.go.aggregate.entity.Student;
 import com.just.go.service.logic.StudentService;
 import com.just.go.service.sdo.StudentCdo;
 import com.just.go.store.jpo.StudentJpo;
+import com.just.go.util.exception.NoSuchStudentException;
 import io.github.jhipster.web.util.PaginationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,6 +15,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -54,6 +56,26 @@ public class StudentController {
         return studentService.findStudentById(studentId);
     }
 
-    
+    @PutMapping("/{studentId}")
+    public ResponseEntity modifyStudent(@PathVariable String studentId,
+                                                @Valid
+                                                @RequestBody StudentCdo studentDetails) throws NoSuchStudentException{
+        Student student = studentService.findStudentById(studentId);
+                           // .orElseThrow(() -> new NoSuchStudentException("Student not found on: "  + studentId));
 
+        student.setName(studentDetails.getName());
+        student.setLastName(studentDetails.getLastName());
+        student.setStudentCard(studentDetails.getStudentCard());
+
+       // Student updateStudent = studentService.registerStudent(student);
+
+     // return ResponseEntity.ok(updateStudent);
+      return ResponseEntity.ok("{\"message\":\"Student updated successfully\"}");
+    }
+
+    @DeleteMapping("/{studentId}")
+    ResponseEntity<String> remove(@PathVariable String studentId){
+        studentService.remove(studentId);
+        return ResponseEntity.ok("{\"message\":\"Student delete successfully\"}");
+    }
 }

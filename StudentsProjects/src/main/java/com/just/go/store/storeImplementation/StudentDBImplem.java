@@ -1,4 +1,4 @@
-package com.just.go.store.storeImpl;
+package com.just.go.store.storeImplementation;
 
 import com.just.go.aggregate.entity.Student;
 import com.just.go.store.jpo.StudentJpo;
@@ -48,7 +48,6 @@ public class StudentDBImplem implements StudentStore {
         return StudentJpo.toDomains(jpos);
     }
 
-
     @Override
     public void update(Student student) {
         StudentJpo studentJpo = new StudentJpo(student);
@@ -76,8 +75,7 @@ public class StudentDBImplem implements StudentStore {
 
     @Override
     public Page<StudentJpo> retrieveAll(Pageable pageable) {
+        //return studentRepository.findAll(pageable.getNumberOfPages());;
         return null;
     }
-
-
 }

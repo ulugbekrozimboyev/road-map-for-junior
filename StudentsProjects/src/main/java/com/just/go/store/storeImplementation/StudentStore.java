@@ -1,4 +1,4 @@
-package com.just.go.store.storeImpl;
+package com.just.go.store.storeImplementation;
 
 import com.just.go.aggregate.entity.Student;
 import com.just.go.store.jpo.StudentJpo;
@@ -22,5 +22,4 @@ public interface StudentStore {
     void delete(String studentId);
     boolean exists(String studentId);
     Page<StudentJpo> retrieveAll(Pageable pageable);
-
 }

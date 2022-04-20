@@ -3,8 +3,7 @@ package com.just.go.service.logic;
 import com.just.go.aggregate.entity.Student;
 import com.just.go.mappers.StudentMapper;
 import com.just.go.service.sdo.StudentCdo;
-import com.just.go.store.jpo.StudentJpo;
-import com.just.go.store.storeImpl.StudentStore;
+import com.just.go.store.storeImplementation.StudentStore;
 import com.just.go.util.exception.NoSuchStudentException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -28,9 +27,9 @@ public class StudentServiceImp implements StudentService{
     @Autowired
     private StudentMapper studentMapper;
 
+
     @Override
     public String registerStudent(StudentCdo studentCdo) {
-        //
         Student student = new Student(studentCdo.getName(), studentCdo.getLastName(), studentCdo.getStudentCard());
 
         return studentStore.create(student);

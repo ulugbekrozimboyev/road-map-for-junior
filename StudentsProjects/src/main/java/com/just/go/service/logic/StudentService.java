@@ -2,9 +2,7 @@ package com.just.go.service.logic;
 
 import com.just.go.aggregate.entity.Student;
 import com.just.go.service.sdo.StudentCdo;
-import com.just.go.store.jpo.StudentJpo;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
