@@ -82,7 +82,7 @@ Yangi kelgan haydochularni Exceldan ham import qilib bazaga qo'shish imkoniyatin
 
 Maqsad: Excel parse. Swagger. Profiles
 
-## for-middle
+# For Middle
 
 ## Prometheus monitoring
 Book shop lohihasidan foydalanishimiz mumkin. Qo'shimcha faqat har bir methodni monitorng qilish kerak bo'ladi
@@ -109,5 +109,8 @@ Bitta asosiy monitor client bo'ladi va hozirgi holatni ko'rsatib turadi:
 Maqsad: Socketlar bilan ishlashni o'rganish. Multithreading
 
 
-
-# Road-Map-Frontend
+## ElasticSearch Demo
+Elasticsearch demo proyekt uchun talablar quyidagilar:
+ - Eng oddiy insert/read by id/update by id/delete by id bo'lishi kerak;
+ - Ko'p itemlarni 1ta insert qilish;
+ - Filter, har xil field va inner field ham qatnashgan query yozish kerak;  
