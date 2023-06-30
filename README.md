@@ -113,4 +113,17 @@ Maqsad: Socketlar bilan ishlashni o'rganish. Multithreading
 Elasticsearch demo proyekt uchun talablar quyidagilar:
  - Eng oddiy insert/read by id/update by id/delete by id bo'lishi kerak;
  - Ko'p itemlarni 1ta insert qilish;
- - Filter, har xil field va inner field ham qatnashgan query yozish kerak;  
+ - Filter, har xil field va inner field ham qatnashgan query yozish kerak;
+
+
+## Upworkdan 1 ta namuman
+Bu proyektni upworkda ko'rib qoldim. Tarjimasi manosini yo'qotsa kerak deb o'zini qoldirdim.
+```
+I need to build a small application without database using Java 17. 
+Detailed description can be provided at later stage. You are free to use web frameworks like Spring. 
+The application is similar to  a URL shortner. I am a developer myself, but I'm looking for elegant 
+code with proper unit test, documentation, comments with simple but maintainable code. 
+The code needs to meet coding standards and use latest Java constructs and meet SOLID principles.
+The task can be done in less than a day. But you could take a week to complete with test cases, 
+documentation and API documentation.
+```
